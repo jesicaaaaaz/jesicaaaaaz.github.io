@@ -54,7 +54,17 @@
       transform: scale(1);
     }
 
-
+    #whatsurname-submit {
+      display: block;
+      margin: 20px auto;
+      font-size: 18px;
+      padding: 10px 20px;
+      border-radius: 5px;
+      background-color: #4169E1;
+      color: white;
+      border: none;
+      cursor: pointer;
+  }
     #question1-form input[type="submit"] {
       display: block;
       margin: 20px auto;
@@ -130,10 +140,22 @@
     }
   </style>
     </head>
+
     <body>
-      <div class="container">
+          <div class="container">
+
+        <div id="whatsurname" style="display: block;">
+        <h2>一个人向你跑来，这个人看起来很慌张</h2>
+        <p>哦哦哦！你一定是修理师吧？</p>
+        <form id="whatsurname-form">
+          <input type="text" id="nameInput" placeholder="没错，我就是...">
+          <br>
+          <button type="submit" id="whatsurname-submit">你找我什么事？</button>
+        </form>
+        </div>
+
         <!-- 问题 1 -->
-        <div id="question1" style="display: block;">
+        <div id="question1" style="display: none;">
           <img src="boat1.jpg" alt="1图片" class="robot-image" />
           <h2>出大事了！！！</h2>
           <p>我们的天下无敌号受伤了！！我们需要立刻修补它，伟大的修理师你修好它吗？</p>
@@ -253,6 +275,22 @@
 
 
   <script>
+  // 问名字
+  const whatsurnameForm = document.getElementById('whatsurname-form');
+
+  whatsurnameForm.addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      const name = document.getElementById('nameInput').value.trim();
+      if (name !== "") {
+          document.getElementById('whatsurname').style.display = 'none';
+          document.getElementById('question1').style.display = 'block';
+          document.getElementById('question1').getElementsByTagName('img')[0].src = 'boat1.jpg';
+            alert('太好了！我终于找到您了！！请您跟我过来！！');
+      } else {
+          alert("您真的是伟大的修理师吧？别开玩笑了，请告诉我您的姓名！");
+      }
+  });
     // 问题 1
     const question1Form = document.getElementById('question1-form');
 
@@ -355,6 +393,8 @@
       }
       }
   });
+
+
   </script>
 
   <div id="final-image" style="display: none; overflow: hidden; margin-top: -20px;">

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Saving Robot Bryan</title>
+  <title>Saving sail</title>
   <meta charset="UTF-8">
 
   <style>
@@ -12,53 +12,52 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 100vh; /* 将高度设置为视口的100% */
+      height: 100vh;
       margin: 0;
-      color: black; /* 设置文字颜色为白色 */
-      text-align: center; /* 文本居中对齐 */
+      color: black;
+      text-align: center;
     }
 
     .container {
-      margin-top: 100px; /* 调整顶部边距 */
+      margin-top: 100px;
     }
 
-    /* 设置选项横向排列 */
+
     #question1-form label {
       display: inline-block;
       margin-right: 20px;
-      margin-top: 2px;/* 调整选项之间的间距 */
+      margin-top: 2px;
       transform: scale(1);
     }
     #question2-form label {
     display: inline-block;
     margin-right: 20px;
-    margin-top: 2px;/* 调整选项之间的间距 */
+    margin-top: 2px;
     transform: scale(1);
     }
     #question3-form label {
       display: inline-block;
       margin-right: 20px;
-      margin-top: 2px;/* 调整选项之间的间距 */
+      margin-top: 2px;
       transform: scale(1);
     }
     #question4-form label {
       display: inline-block;
       margin-right: 20px;
-      margin-top: 2px;/* 调整选项之间的间距 */
+      margin-top: 2px;
       transform: scale(1);
     }
     #question5-form label {
       display: inline-block;
       margin-right: 20px;
-      margin-top: 2px;/* 调整选项之间的间距 */
+      margin-top: 2px;
       transform: scale(1);
     }
 
 
-    /* 提交按钮样式 */
     #question1-form input[type="submit"] {
       display: block;
-      margin: 20px auto; /* 居中放大 */
+      margin: 20px auto;
       font-size: 18px;
       padding: 10px 20px;
       border-radius: 5px;
@@ -69,7 +68,7 @@
     }
     #question2-form input[type="submit"] {
       display: block;
-      margin: 20px auto; /* 居中放大 */
+      margin: 20px auto;
       font-size: 18px;
       padding: 10px 20px;
       border-radius: 5px;
@@ -80,7 +79,7 @@
     }
     #question3-form input[type="submit"] {
       display: block;
-      margin: 20px auto; /* 居中放大 */
+      margin: 20px auto;
       font-size: 18px;
       padding: 10px 20px;
       border-radius: 5px;
@@ -91,7 +90,7 @@
     }
     #question4-form input[type="submit"] {
       display: block;
-      margin: 20px auto; /* 居中放大 */
+      margin: 20px auto;
       font-size: 18px;
       padding: 10px 20px;
       border-radius: 5px;
@@ -102,7 +101,7 @@
     }
     #question5-form input[type="submit"] {
       display: block;
-      margin: 20px auto; /* 居中放大 */
+      margin: 20px auto;
       font-size: 18px;
       padding: 10px 20px;
       border-radius: 5px;
@@ -113,24 +112,21 @@
     }
 
 
-    /* 文字往下移动 */
     h2 {
-      margin-top: 100px; /* 设置顶部边距 */
+      margin-top: 100px;
     }
     p  {
       margin-top:20px;
     }
-
-    /* 调整图片大小 */
     img {
       width: 150px;
       height: 150px;
-      margin-bottom: 20px; /* 调整图片与标题之间的间距 */
+      margin-bottom: 20px;
     }
 
-    /* 单独放大robot的图片 */
+
     .robot-image {
-      transform: scale(2.5); /* 将图片放大两倍 */
+      transform: scale(2.5);
     }
   </style>
     </head>
@@ -257,115 +253,99 @@
 
 
   <script>
-    // 获取问题 1 的表单元素
+    // 问题 1
     const question1Form = document.getElementById('question1-form');
 
-    // 监听问题 1 表单的提交事件
+
     question1Form.addEventListener('submit', function (event) {
-      // 阻止默认的表单提交行为
+
       event.preventDefault();
 
-      // 获取用户选择的答案
+
       const selectedAnswer1 = document.getElementById('answer1A').checked? 'A' : (document.getElementById('answer1B').checked? 'B' : 'C');
 
-      // 判断答案是否正确
+
       if (selectedAnswer1 === 'A') {
-        // 隐藏问题 1，显示问题 2
+
         document.getElementById('question1').style.display = 'none';
         document.getElementById('question2').style.display = 'block';
 
-        // 切换问题上方的图片
+
         document.getElementById('question2').getElementsByTagName('img')[0].src = 'boat2.jpg';
       } else {
-        // 显示错误提示
+
         alert('哦..伟大的修理师我想我不该质疑你，但这好像并不适合我们的天下无敌号！');
       }
     });
-
-    // 获取问题 2 的表单元素
+    // 问题 2
     const question2Form = document.getElementById('question2-form');
 
-    // 监听问题 2 表单的提交事件
     question2Form.addEventListener('submit', function (event) {
-      // 阻止默认的表单提交行为
+
       event.preventDefault();
 
-      // 获取用户选择的答案
       const selectedAnswer2 = document.getElementById('answer2C').checked? 'C' : (document.getElementById('answer2B').checked? 'A' : 'B');
 
-      // 判断答案是否正确，并根据结果显示下一个问题或提示错误信息
       if (selectedAnswer2 === 'C') {
         document.getElementById('question2').style.display = 'none';
         document.getElementById('question3').style.display = 'block';
 
-        // 切换问题上方的图片
+
         document.getElementById('question3').getElementsByTagName('img')[0].src = 'boat3.jpg';
       } else {
         alert('伟大的修理师！再想一想！我相信还有其他更合适的零件！');
       }
     });
 
-    // 获取问题 3 的表单元素
+    // 问题 3
     const question3Form = document.getElementById('question3-form');
 
-    // 监听问题 3 表单的提交事件
+
     question3Form.addEventListener('submit', function (event) {
-      // 阻止默认的表单提交行为
+
       event.preventDefault();
 
-      // 获取用户选择的答案
       const selectedAnswer3 = document.getElementById('answer3C').checked? 'C' : (document.getElementById('answer3B').checked? 'A' : 'B');
 
-      // 判断答案是否正确，并根据结果显示下一个问题或提示错误信息
       if (selectedAnswer3 === 'C') {
         document.getElementById('question3').style.display = 'none';
         document.getElementById('question4').style.display = 'block';
 
-        // 切换问题上方的图片
         document.getElementById('question4').getElementsByTagName('img')[0].src = 'boat4.jpg';
       } else {
         alert('修理师，您确实是这个吗？');
       }
     });
-
-    // 获取问题 4 的表单元素
+    // 问题 4
     const question4Form = document.getElementById('question4-form');
 
-    // 监听问题 4 表单的提交事件
     question4Form.addEventListener('submit', function (event) {
-      // 阻止默认的表单提交行为
+
       event.preventDefault();
 
-      // 获取用户选择的答案
       const selectedAnswer4 = document.getElementById('answer4B').checked? 'B' : (document.getElementById('answer4A').checked? 'A' : 'C');
 
-      // 判断答案是否正确，并根据结果显示下一个问题或提示错误信息
+
       if (selectedAnswer4 === 'B') {
         document.getElementById('question4').style.display = 'none';
         document.getElementById('question5').style.display = 'block';
 
-        // 切换问题上方的图片
         document.getElementById('question5').getElementsByTagName('img')[0].src = 'boat5.jpg';
       } else {
         alert('修理师，这个好像并不合适！');
       }
     });
-
-    // 获取问题 5 的表单元素
+    // 问题 5
     const question5Form = document.getElementById('question5-form');
 
-    // 监听问题 5 表单的提交事件
     question5Form.addEventListener('submit', function(event) {
-    // 阻止默认的表单提交行为
+
     event.preventDefault();
 
-    // 获取用户选择的答案
     const selectedAnswer5 = document.querySelector('input[name="answer5"]:checked');
 
-
-    // 判断用户是否选择了答案
     if (selectedAnswer5) {
-      // 判断答案是否正确，并根据结果显示下一个问题或弹出提示信息
+
       if (selectedAnswer5.value === 'C') {
         document.getElementById('question5').style.display = 'none';
         document.getElementById('final-image').style.display = 'block';

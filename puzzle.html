@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Saving Robot Bryan</title>
+  <meta charset="UTF-8">
+
+  <style>
+    body {
+      background-image: url('background2.jpg');
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; /* 将高度设置为视口的100% */
+      margin: 0;
+      color: black; /* 设置文字颜色为白色 */
+      text-align: center; /* 文本居中对齐 */
+    }
+
+    .container {
+      margin-top: 100px; /* 调整顶部边距 */
+    }
+
+    /* 设置选项横向排列 */
+    #question1-form label {
+      display: inline-block;
+      margin-right: 20px;
+      margin-top: 2px;/* 调整选项之间的间距 */
+      transform: scale(1);
+    }
+    #question2-form label {
+    display: inline-block;
+    margin-right: 20px;
+    margin-top: 2px;/* 调整选项之间的间距 */
+    transform: scale(1);
+    }
+    #question3-form label {
+      display: inline-block;
+      margin-right: 20px;
+      margin-top: 2px;/* 调整选项之间的间距 */
+      transform: scale(1);
+    }
+    #question4-form label {
+      display: inline-block;
+      margin-right: 20px;
+      margin-top: 2px;/* 调整选项之间的间距 */
+      transform: scale(1);
+    }
+    #question5-form label {
+      display: inline-block;
+      margin-right: 20px;
+      margin-top: 2px;/* 调整选项之间的间距 */
+      transform: scale(1);
+    }
+
+
+    /* 提交按钮样式 */
+    #question1-form input[type="submit"] {
+      display: block;
+      margin: 20px auto; /* 居中放大 */
+      font-size: 18px;
+      padding: 10px 20px;
+      border-radius: 5px;
+      background-color: #4169E1;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    #question2-form input[type="submit"] {
+      display: block;
+      margin: 20px auto; /* 居中放大 */
+      font-size: 18px;
+      padding: 10px 20px;
+      border-radius: 5px;
+      background-color: #4169E1;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    #question3-form input[type="submit"] {
+      display: block;
+      margin: 20px auto; /* 居中放大 */
+      font-size: 18px;
+      padding: 10px 20px;
+      border-radius: 5px;
+      background-color: #4169E1;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    #question4-form input[type="submit"] {
+      display: block;
+      margin: 20px auto; /* 居中放大 */
+      font-size: 18px;
+      padding: 10px 20px;
+      border-radius: 5px;
+      background-color: #4169E1;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    #question5-form input[type="submit"] {
+      display: block;
+      margin: 20px auto; /* 居中放大 */
+      font-size: 18px;
+      padding: 10px 20px;
+      border-radius: 5px;
+      background-color: #4169E1;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+
+    /* 文字往下移动 */
+    h2 {
+      margin-top: 100px; /* 设置顶部边距 */
+    }
+    p  {
+      margin-top:20px;
+    }
+
+    /* 调整图片大小 */
+    img {
+      width: 150px;
+      height: 150px;
+      margin-bottom: 20px; /* 调整图片与标题之间的间距 */
+    }
+
+    /* 单独放大robot的图片 */
+    .robot-image {
+      transform: scale(2.5); /* 将图片放大两倍 */
+    }
+  </style>
+    </head>
+    <body>
+      <div class="container">
+        <!-- 问题 1 -->
+        <div id="question1" style="display: block;">
+          <img src="boat1.jpg" alt="1图片" class="robot-image" />
+          <h2>出大事了！！！</h2>
+          <p>我们的天下无敌号受伤了！！我们需要立刻修补它，伟大的修理师你修好它吗？</p>
+          <form id="question1-form">
+            <label for="answer1A">
+              <input type="radio" name="answer1" value="A" id="answer1A" style="display: block;">
+              <img src="piece1.jpg" alt="1A 图片" />
+            </label>
+            <label for="answer1B">
+              <input type="radio" name="answer1" value="B" id="answer1B" style="display:block;">
+              <img src="piece2.jpg" alt="1B 图片" />
+            </label>
+            <label for="answer1C">
+              <input type="radio" name="answer1" value="C" id="answer1C" style="display:block;">
+              <img src="piece3.jpg" alt="1C 图片" class="boat2-image" />
+            </label>
+            <input type="submit" value="就选这个吧！">
+          </form>
+        </div>
+      </div>
+
+         <!-- 问题 2 -->
+         <div id="question2" style="display: none;">
+        <img src="igm.jpg" alt="1图片" class="robot-image" />
+       <h2>天哪，它又受伤了！！！</h2>
+       <p>天下无敌号经历了暴风雨！它保护了我们的船员，伟大的修理师这次也要靠你啦！</p>
+       <form id="question2-form">
+         <div class="options">
+           <label for="answer2A">
+             <input type="radio" name="answer2" value="A" id="answer2A" style="display: block;">
+             <img src="piece1B.jpg" alt="2A 图片" />
+           </label>
+           <label for="answer2B">
+             <input type="radio" name="answer2" value="B" id="answer2B" style="display:block;">
+             <img src="piece2B.jpg" alt="2B 图片" />
+           </label>
+           <label for="answer2C">
+             <input type="radio" name="answer2" value="C" id="answer2C" style="display:block;">
+             <img src="piece3B.jpg" alt="2C 图片" />
+           </label>
+         </div>
+         <input type="submit" value="这个看起来不错！">
+       </form>
+     </div>
+
+        <!-- 问题 3 -->
+        <div id="question3" style="display: none;">
+          <img src="boat3.jpg" alt="1图片" class="robot-image" />
+        <h2>可怜的天下无敌号...</h2>
+        <p>你不敢想象我们都经历了什么...我敢说那就是克拉肯！！总之....修理师...请您帮帮它！</p>
+        <form id="question3-form">
+          <div class="options">
+            <label for="answer3A">
+              <input type="radio" name="answer3" value="A" id="answer3A">
+              <img src="piece1C.jpg" alt="3A 图片">
+            </label>
+            <label for="answer3B">
+              <input type="radio" name="answer3" value="B" id="answer3B">
+              <img src="piece2C.jpg" alt="3B 图片">
+            </label>
+            <label for="answer3C">
+              <input type="radio" name="answer3" value="C" id="answer3C">
+              <img src="piece3C.jpg" alt="3C 图片">
+            </label>
+          </div>
+          <input type="submit" value="似乎这个可以">
+        </form>
+      </div>
+
+      <!-- 问题 4 -->
+    <div id="question4" style="display: none;">
+    <img src="boat4.jpg" alt="4图片"class="robot-image" />
+    <h2>我的天哪！！</h2>
+    <p>修理师！！天下无敌号的船桅几乎被整条卷走..我们到底该怎么办！！</p>
+    <form id="question4-form">
+      <div class="options">
+        <label for="answer4A">
+          <input type="radio" name="answer4" value="A" id="answer4A">
+          <img src="piece1D.jpg" alt="4A 图片">
+        </label>
+        <label for="answer4B">
+          <input type="radio" name="answer4" value="B" id="answer4B">
+          <img src="piece3D.jpg" alt="4B 图片">
+        </label>
+        <label for="answer4C">
+          <input type="radio" name="answer4" value="C" id="answer4C">
+          <img src="piece2D.jpg" alt="4C 图片">
+        </label>
+      </div>
+      <input type="submit" value="没有其他选择了!">
+    </form>
+    </div>
+
+    <!-- 问题 5 -->
+    <div id="question5" style="display: none;">
+    <img src="boat5.jpg" alt="大脑图片" class="robot-image"/>
+    <h2>天下无敌号伤痕累累！</h2>
+    <p>它看起来好像死了。请您救救它！</p>
+    <form id="question5-form">
+      <div class="options">
+        <label for="answer5A">
+          <input type="radio" name="answer5" value="A" id="answer5A">
+          <img src="piece1E.jpg" alt="5A 图片">
+        </label>
+        <label for="answer5B">
+          <input type="radio" name="answer5" value="B" id="answer5B">
+          <img src="piece2E.jpg" alt="5B 图片">
+        </label>
+        <label for="answer5C">
+          <input type="radio" name="answer5" value="C" id="answer5C">
+          <img src="piece3E.jpg" alt="5C 图片">
+        </label>
+      </div>
+      <input type="submit" value="这个一定行！">
+    </form>
+    </div>
+
+
+  <script>
+    // 获取问题 1 的表单元素
+    const question1Form = document.getElementById('question1-form');
+
+    // 监听问题 1 表单的提交事件
+    question1Form.addEventListener('submit', function (event) {
+      // 阻止默认的表单提交行为
+      event.preventDefault();
+
+      // 获取用户选择的答案
+      const selectedAnswer1 = document.getElementById('answer1A').checked? 'A' : (document.getElementById('answer1B').checked? 'B' : 'C');
+
+      // 判断答案是否正确
+      if (selectedAnswer1 === 'A') {
+        // 隐藏问题 1，显示问题 2
+        document.getElementById('question1').style.display = 'none';
+        document.getElementById('question2').style.display = 'block';
+
+        // 切换问题上方的图片
+        document.getElementById('question2').getElementsByTagName('img')[0].src = 'boat2.jpg';
+      } else {
+        // 显示错误提示
+        alert('哦..伟大的修理师我想我不该质疑你，但这好像并不适合我们的天下无敌号！');
+      }
+    });
+
+    // 获取问题 2 的表单元素
+    const question2Form = document.getElementById('question2-form');
+
+    // 监听问题 2 表单的提交事件
+    question2Form.addEventListener('submit', function (event) {
+      // 阻止默认的表单提交行为
+      event.preventDefault();
+
+      // 获取用户选择的答案
+      const selectedAnswer2 = document.getElementById('answer2C').checked? 'C' : (document.getElementById('answer2B').checked? 'A' : 'B');
+
+      // 判断答案是否正确，并根据结果显示下一个问题或提示错误信息
+      if (selectedAnswer2 === 'C') {
+        document.getElementById('question2').style.display = 'none';
+        document.getElementById('question3').style.display = 'block';
+
+        // 切换问题上方的图片
+        document.getElementById('question3').getElementsByTagName('img')[0].src = 'boat3.jpg';
+      } else {
+        alert('伟大的修理师！再想一想！我相信还有其他更合适的零件！');
+      }
+    });
+
+    // 获取问题 3 的表单元素
+    const question3Form = document.getElementById('question3-form');
+
+    // 监听问题 3 表单的提交事件
+    question3Form.addEventListener('submit', function (event) {
+      // 阻止默认的表单提交行为
+      event.preventDefault();
+
+      // 获取用户选择的答案
+      const selectedAnswer3 = document.getElementById('answer3C').checked? 'C' : (document.getElementById('answer3B').checked? 'A' : 'B');
+
+      // 判断答案是否正确，并根据结果显示下一个问题或提示错误信息
+      if (selectedAnswer3 === 'C') {
+        document.getElementById('question3').style.display = 'none';
+        document.getElementById('question4').style.display = 'block';
+
+        // 切换问题上方的图片
+        document.getElementById('question4').getElementsByTagName('img')[0].src = 'boat4.jpg';
+      } else {
+        alert('修理师，您确实是这个吗？');
+      }
+    });
+
+    // 获取问题 4 的表单元素
+    const question4Form = document.getElementById('question4-form');
+
+    // 监听问题 4 表单的提交事件
+    question4Form.addEventListener('submit', function (event) {
+      // 阻止默认的表单提交行为
+      event.preventDefault();
+
+      // 获取用户选择的答案
+      const selectedAnswer4 = document.getElementById('answer4B').checked? 'B' : (document.getElementById('answer4A').checked? 'A' : 'C');
+
+      // 判断答案是否正确，并根据结果显示下一个问题或提示错误信息
+      if (selectedAnswer4 === 'B') {
+        document.getElementById('question4').style.display = 'none';
+        document.getElementById('question5').style.display = 'block';
+
+        // 切换问题上方的图片
+        document.getElementById('question5').getElementsByTagName('img')[0].src = 'boat5.jpg';
+      } else {
+        alert('修理师，这个好像并不合适！');
+      }
+    });
+
+    // 获取问题 5 的表单元素
+    const question5Form = document.getElementById('question5-form');
+
+    // 监听问题 5 表单的提交事件
+    question5Form.addEventListener('submit', function(event) {
+    // 阻止默认的表单提交行为
+    event.preventDefault();
+
+    // 获取用户选择的答案
+    const selectedAnswer5 = document.querySelector('input[name="answer5"]:checked');
+
+
+    // 判断用户是否选择了答案
+    if (selectedAnswer5) {
+      // 判断答案是否正确，并根据结果显示下一个问题或弹出提示信息
+      if (selectedAnswer5.value === 'C') {
+        document.getElementById('question5').style.display = 'none';
+        document.getElementById('final-image').style.display = 'block';
+        alert('谢谢你，再一次拯救了我们的天下无敌号！他再一次活了过来！');
+      } else {
+        alert('这个不适合放在上面！再想想办法吧修理师！');
+      }
+      }
+  });
+  </script>
+
+  <div id="final-image" style="display: none; overflow: hidden; margin-top: -20px;">
+      <img src="final_boat.jpg" alt="最终图片" style="display: block; margin: 0 auto; width: 50%; height: 50%;" />
+      <div id="final-text" style="margin-bottom: 20px;">
+          <h2>你让天下无敌号又一次活了过来！不过它还是天下无敌号本身吗？</h2>
+          <p>它几乎全身的零件都换了个遍！它可能变成另一艘船了...不过没关系！他现在是天下地上无敌号！！</p>
+
+      </div>
+  </div>
+</body>
+
+</html>

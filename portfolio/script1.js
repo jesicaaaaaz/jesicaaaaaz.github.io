@@ -38,26 +38,29 @@ window.addEventListener('scroll', scrollHeader)
 
 
 /*email--------------------------------------------------------------------*/
-const contactForm = document.getElementById('contact-form'),
-      contactMessage = document.getElementById('contact-message')
+const contactForm = document.getElementById('contact-form')
+const contactMessage = document.getElementById('contact-message')
 
 const sendEmail = (e) => {
   e.preventDefault()
 
   emailjs.sendForm('service_lris8zy', 'template_w02qiqn', '#contact-form', 'rLkKmXwxgC7_JeZ74')
-  .then(() => {
-    contactMessage.textContent = 'Message sent successfully ✔'
+    .then(() => {
+        contactMessage.textContent = 'Message sent successfully ✔'
+      setTimeout(() => {
+          contactMessage.textContent = ''
+        }, 5000);
+         contactForm.reset()
 
-    setTimeout(() => {
-      contactMessage.textContent = ''
-    }, 5000)
-
-    contactForm.reset()
-
-  }, () => {
-    contactMessage.textContent = 'Message not sent (service_error) ❌'
+       }, () => {
+        contactMessage.textContent = 'Message not sent (service_error) ❌'
+    
     })
-  }
+}
+
+contactForm.addEventListener('submit', sendEmail)
+
+
 /*scroll up--------------------------------------------------------------------*/
 const scrollUp = () =>{
 	const scrollUp = document.getElementById('scroll-up')

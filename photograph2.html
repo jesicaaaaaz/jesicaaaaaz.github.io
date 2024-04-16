@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>photograph</title>
+  <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/svg+xml">
+  <style>
+    .footer__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .gallery__item {
+      flex: 0 1 calc(50% - 10px);
+      margin-bottom: 20px;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      width: 330.33px;
+      height: 185.81px;
+    }
+
+    @media screen and (min-width: 768px) {
+      .gallery__item {
+        flex-basis: calc(33.33% - 10px);
+      }
+    }
+
+    .gallery__item:hover {
+      transform: scale(1.1);
+      z-index: 1;
+    }
+
+    .fullscreen-image {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 9;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: none;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .fullscreen-image img {
+      max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+    cursor: pointer;
+    object-fit:contain;
+  }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <nav class="nav">
+        <a href="#" class="nav__logo">
+          <span class="nav__logo-circle">J</span>
+          <span class="nav__logo-name">JESICAZHANG.</span>
+        </a>
+        <div class="nav__toggle">
+          <i class="ri-menu-line"></i>
+        </div>
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item"><a href="#photos" class="nav__link">Photos</a></li>
+            <li class="nav__item"><a href="#description" class="nav__link">description</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- Main Content -->
+  <main class="main">
+    <section id="photos" class="section">
+      <div class="container grid">
+        <h2 class="section__title">Photos</h2>
+        <div class="gallery">
+          <img src="image2\pic (16).jpeg" alt="Photo 1" class="gallery__item" onclick="showFullscreenImage(this.src)">
+          <img src="image2\pic (1).jpeg" alt="Photo 2" class="gallery__item" onclick="showFullscreenImage(this.src)">
+          <img src="image2\pic (1).jpg" alt="Photo 3" class="gallery__item" onclick="showFullscreenImage(this.src)">
+          <img src="image2\pic (2).jpg" alt="Photo 4" class="gallery__item" onclick="showFullscreenImage(this.src)">
+          <img src="image2\pic (2).jpeg" alt="Photo 5" class="gallery__item" onclick="showFullscreenImage(this.src)">
+          <img src="image2\pic (3).jpeg" alt="Photo 6" class="gallery__item" onclick="showFullscreenImage(this.src)">
+          <img src="image2\pic (15).jpeg" alt="Photo 7" class="gallery__item" onclick="showFullscreenImage(this.src)">
+          <img src="image2\pic (4).jpeg" alt="Photo 8" class="gallery__item" onclick="showFullscreenImage(this.src)">
+          <img src="image2\pic (4).jpg" alt="Photo 9" class="gallery__item" onclick="showFullscreenImage(this.src)">
+          <img src="image2\pic (6).jpeg" alt="Photo 10" class="gallery__item" onclick="showFullscreenImage(this.src)">
+          <img src="image2\pic (7).jpeg" alt="Photo 11" class="gallery__item" onclick="showFullscreenImage(this.src)">
+          <img src="image2\pic (11).jpeg" alt="Photo 12" class="gallery__item" onclick="showFullscreenImage(this.src)">
+          <img src="image2\pic (9).jpeg" alt="Photo 13" class="gallery__item" onclick="showFullscreenImage(this.src)">
+          <img src="image2\pic (12).jpeg" alt="Photo 14" class="gallery__item" onclick="showFullscreenImage(this.src)">
+          <img src="image2\pic (13).jpeg" alt="Photo 14" class="gallery__item" onclick="showFullscreenImage(this.src)">
+          <img src="image2\pic (14).jpeg" alt="Photo 14" class="gallery__item" onclick="showFullscreenImage(this.src)">
+
+        </div>
+      </div>
+    </section>
+    <section id="description" class="section">
+      <div class="container grid">
+        <h2 class="section__title">Description</h2>
+        <p>Photographed in Beijing, China</p>
+      </div>
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__container container grid">
+      <span class="footer__copy">
+        &#169; All Rights Reserved By
+        <a href="">JesicaZhang.</a>
+      </span>
+      <a href="portfolio.html" class="footer__link">Home</a>
+    </div>
+  </footer>
+  <div class="fullscreen-image" id="fullscreenImage" onclick="hideFullscreenImage()">
+    <img src="" alt="Fullscreen Image">
+  </div>
+
+  <script>
+    function showFullscreenImage(imageSrc) {
+      const fullscreenImage = document.getElementById('fullscreenImage');
+      const imgElement = fullscreenImage.querySelector('img');
+      imgElement.src = imageSrc;
+      fullscreenImage.style.display = 'flex';
+    }
+
+    function hideFullscreenImage() {
+      const fullscreenImage = document.getElementById('fullscreenImage');
+      fullscreenImage.style.display = 'none';
+    }
+  </script>
+</body>
+</html>

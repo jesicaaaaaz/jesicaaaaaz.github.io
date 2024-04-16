@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sample Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <nav class="nav">
+        <a href="#" class="nav__logo">
+          <span class="nav__logo-circle">S</span>
+          <span class="nav__logo-name">Sample Page</span>
+        </a>
+        <div class="nav__toggle">
+          <i class="ri-menu-line"></i>
+        </div>
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item"><a href="#photos" class="nav__link">Photos</a></li>
+            <li class="nav__item"><a href="#videos" class="nav__link">Videos</a></li>
+            <li class="nav__item"><a href="#files" class="nav__link">Files</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main">
+    <section id="photos" class="section">
+      <div class="container grid">
+        <h2 class="section__title">Photos</h2>
+        <div class="gallery">
+          <img src="photo1.jpg" alt="Photo 1" class="gallery__item">
+          <img src="photo2.jpg" alt="Photo 2" class="gallery__item">
+          <!-- Add more photos -->
+        </div>
+      </div>
+    </section>
+
+    <section id="videos" class="section">
+      <div class="container grid">
+        <h2 class="section__title">Videos</h2>
+        <div class="videos">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/video1" frameborder="0" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/video2" frameborder="0" allowfullscreen></iframe>
+          <!-- Add more videos -->
+        </div>
+      </div>
+    </section>
+
+    <section id="files" class="section">
+      <div class="container grid">
+        <h2 class="section__title">Files</h2>
+        <div class="files">
+          <a href="file1.pdf" class="file">File 1</a>
+          <a href="file2.pdf" class="file">File 2</a>
+          <!-- Add more files -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&#169; 2024 Sample Page. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="your-script.js"></script>
+</body>
+</html>
